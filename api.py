@@ -52,7 +52,7 @@ class API_Star_Wars(API_consumer):
    URL = self.URL + str(id)
         try:
             dado = requests.get(URL).json()
-            return ((dado.get('name, [film(s)]')))
+            return ((dado.get('name'), dado.get('films')))
         except:
             pass
 
@@ -69,7 +69,7 @@ class API_Ice_and_Fire(API_consumer):
         URL = self.URL + str(id)
         try:
             dado = requests.get(URL).json()
-            return ((dado.get('name, [tvSeries]')))
+            return ((dado.get('name'), dado.get('tvSeries')))
         except:
             pass
  
