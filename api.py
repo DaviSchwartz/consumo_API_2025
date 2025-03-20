@@ -37,7 +37,7 @@ class API_Rick_Morty(API_consumer):
             dado = requests.get(URL).json() 
             return ((dado.get('id'), dado.get('name'), dado.get('species')))
         except:
-        pass
+            pass
 
 class API_Star_Wars(API_consumer):
     ''' The universe of Star Wars '''
